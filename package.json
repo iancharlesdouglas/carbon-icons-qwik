@@ -1,5 +1,5 @@
 {
-  "name": "my-qwik-library-name",
+  "name": "carbon-icons-qwik",
   "version": "0.0.1",
   "description": "Create a reusable Qwik component library",
   "main": "./lib/index.qwik.mjs",

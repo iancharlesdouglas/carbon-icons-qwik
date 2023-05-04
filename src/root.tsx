@@ -1,6 +1,6 @@
-import { Counter } from './components/counter/counter';
 import { Icon } from './components/icon/icon';
-import { Logo } from './components/logo/logo';
+import { Add } from './icons/add';
+import { Branch } from './icons/branch';
 
 export default () => {
   return (
@@ -10,9 +10,9 @@ export default () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <Logo />
-        <Counter />
         <Icon title="Test" size={32}/>
+        <Add title="Add" size={150}/>
+        <Branch title="Create branch" />
       </body>
     </>
   );

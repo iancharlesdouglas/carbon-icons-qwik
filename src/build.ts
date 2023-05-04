@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import {ModuleName, IconOutput, BuildIcons} from '@carbon/icons';
+import {BuildIcons} from '@carbon/icons';
 import {name, version as PKG_VERSION, devDependencies} from '../package.json';
 import metadata from '@carbon/icons/metadata.json';
 
@@ -24,10 +24,12 @@ export const build = async () => {
   await fs.remove('src/icons');
   await fs.mkdir('src/icons');
 
+  const indexEntries: string[] = ['/* IBM Carbon Design System Icons */', `/* Carbon icons version ${VERSION.replace(/[^~]/, '')} - built with ${name} version ${PKG_VERSION} */`];
+
   const iconDefs = (metadata as BuildIcons).icons;
   iconDefs.forEach(iconDef => {
     const fileName = `src/icons/${iconDef.name}.tsx`;
-    const typeName = stripLeadingNumbers(toPascalCase(iconDef.friendlyName));
+    const typeName = stripInvalidCharacters(toPascalCase(correctedFriendlyName(iconDef.name, iconDef.friendlyName)));
     console.debug('Building', typeName);
     const defn32 = iconDef.assets.find(asset => asset.size === 32 || asset.size === 'glyph')!;
     const svgContent = defn32.optimized.data;
@@ -40,7 +42,13 @@ export const ${typeName} = component$((props: IconProps) =>
     {props.title && <title>{props.title}</title>}
   </svg>)`;
     fs.writeFile(fileName, componentDef);
+
+    const indexEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
+    indexEntries.push(indexEntry);
   });
+
+  await fs.remove('src/index.ts');
+  fs.writeFile('src/index.ts', indexEntries.join('\n'));
 
   console.timeEnd(TIME_MARKER);
   console.info('Icons built.');
@@ -67,14 +75,44 @@ export const toPascalCase = (name?: string): string | undefined => {
 
 const numbersToNames = new Map([['1', 'One'], ['2', 'Two'], ['3', 'Three'], ['4', 'Four'], ['5', 'Five'], ['6', 'Six'], ['7', 'Seven'], ['8', 'Eight'], ['9', 'Nine']]);
 
-export const stripLeadingNumbers = (name?: string): string | undefined => {
+/**
+ * Converts numbers to words and removes invalid characters
+ * @param name Input name
+ * @returns Sanitised name
+ */
+export const stripInvalidCharacters = (name?: string): string | undefined => {
   if (!name) {
     return name;
   }
+
+  // Convert numbers to words
+  let sanitisedName = name;
   const keys = Array.from(numbersToNames.keys());
   const initialChar = name.substring(0, 1);
   if (keys.find(key => initialChar === key)) {
-    return numbersToNames.get(initialChar) + name.substring(1);
+    sanitisedName = numbersToNames.get(initialChar) + name.substring(1);
   }
-  return name;
+
+  // Remove illegal chars
+  const illegalChars = ['®', '™', '/', '-', '.'];
+  while (illegalChars.find(char => sanitisedName.includes(char))) {
+    illegalChars.forEach(char => (sanitisedName = sanitisedName.replace(char, '')));
+  }
+
+  return sanitisedName;
 };
+
+/**
+ * Converts a duplicate friendly name to a unique name
+ * @param name Name (key)
+ * @param friendlyName Candidate friendly name
+ * @returns Unique friendly name
+ */
+export const correctedFriendlyName = (name: string, friendlyName: string): string | undefined => {
+  const correctedNames = new Map([['box--large', 'Box large'], ['watson--machine-learning', 'Watson Machine Learning']]);
+  if (correctedNames.has(name)) {
+    return correctedNames.get(name);
+  } else {
+    return friendlyName;
+  }
+}
