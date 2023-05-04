@@ -5,16 +5,8 @@ import metadata from '@carbon/icons/metadata.json';
 
 const VERSION = devDependencies['@carbon/icons'];
 
-/*
- *  root-level icons
-    - use name for the file 
-    - use friendlyName for the type (transform into Pascal case e.g. "Add alt" -> "AddAlt")
-    - use 32x32 version - assets[0] (where .size === 32)
-    - SVG data from .optimized.data
-    - add x, y, width, height, fill attributes to generated component
-    Change names - convert leading numbers to names e.g. "3D" -> "ThreeD"
-    Add title tag to SVG if there is a title
-    Add size to component (16|20|24|32)
+/**
+ * Builds the icons
  */
 export const build = async () => {
   const TIME_MARKER = 'Built in';

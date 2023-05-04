@@ -6,4 +6,5 @@
 export interface IconProps {
   size?: 16 | 20 | 24 | 32;
   title?: string;
+  fill?: string;
 }
