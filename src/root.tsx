@@ -1,4 +1,5 @@
 import { Counter } from './components/counter/counter';
+import { Icon } from './components/icon/icon';
 import { Logo } from './components/logo/logo';
 
 export default () => {
@@ -11,6 +12,7 @@ export default () => {
       <body>
         <Logo />
         <Counter />
+        <Icon title="Test" size={32}/>
       </body>
     </>
   );

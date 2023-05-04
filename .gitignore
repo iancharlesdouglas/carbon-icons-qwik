@@ -3,6 +3,7 @@
 /lib
 /lib-types
 /server
+/src/icons
 
 # Development
 node_modules
