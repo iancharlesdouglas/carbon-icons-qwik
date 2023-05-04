@@ -27,7 +27,7 @@ export const build = async () => {
   const iconDefs = (metadata as BuildIcons).icons;
   iconDefs.forEach(iconDef => {
     const fileName = `src/icons/${iconDef.name}.tsx`;
-    const typeName = toPascalCase(iconDef.friendlyName);
+    const typeName = stripLeadingNumbers(toPascalCase(iconDef.friendlyName));
     console.debug('Building', typeName);
     const defn32 = iconDef.assets.find(asset => asset.size === 32 || asset.size === 'glyph')!;
     const svgContent = defn32.optimized.data;
@@ -67,9 +67,14 @@ export const toPascalCase = (name?: string): string | undefined => {
 
 const numbersToNames = new Map([['1', 'One'], ['2', 'Two'], ['3', 'Three'], ['4', 'Four'], ['5', 'Five'], ['6', 'Six'], ['7', 'Seven'], ['8', 'Eight'], ['9', 'Nine']]);
 
-export const stripLeadingNumbers(name?: string): string | undefined => {
+export const stripLeadingNumbers = (name?: string): string | undefined => {
   if (!name) {
     return name;
   }
-  
+  const keys = Array.from(numbersToNames.keys());
+  const initialChar = name.substring(0, 1);
+  if (keys.find(key => initialChar === key)) {
+    return numbersToNames.get(initialChar) + name.substring(1);
+  }
+  return name;
 };

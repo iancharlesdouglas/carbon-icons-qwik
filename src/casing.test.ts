@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import { toPascalCase } from './build';
+import { stripLeadingNumbers, toPascalCase } from './build';
 
 describe('Pascal casing', () => {
   it('Converts a sentence-like name into a single Pascal-cased word', () => {
@@ -31,4 +31,27 @@ describe('Pascal casing', () => {
 
     expect(actualName).toEqual(expectedName);
   });
+
+  it('Changes leading numbers to words', () => {
+    let expectedName: string | undefined = 'ThreeD';
+    let inputName: string | undefined = '3D';
+
+    let actualName = stripLeadingNumbers(inputName);
+
+    expect(actualName).toEqual(expectedName);
+
+    expectedName = 'FourKAlt';
+    inputName = '4KAlt';
+
+    actualName = stripLeadingNumbers(inputName);
+
+    expect(actualName).toEqual(expectedName);
+
+    expectedName = undefined;
+    inputName = undefined;
+
+    actualName = stripLeadingNumbers(inputName);
+
+    expect(actualName).toEqual(expectedName);
+  })
 });
