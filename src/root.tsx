@@ -11,7 +11,7 @@ export default () => {
       </head>
       <body>
         <Icon title="Test" size={32}/>
-        <Add title="Add" size={150}/>
+        <Add title="Add" size={24}/>
         <Branch title="Create branch" />
       </body>
     </>

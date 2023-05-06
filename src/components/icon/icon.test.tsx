@@ -47,14 +47,14 @@ describe('Icon component', () => {
     expect(svgElement.textContent).toEqual(expectedTitle);
   });
 
-  it('renders "rest" attributes supplied onto the SVG', async () => {
+  it('renders supplied "id" attribute onto the SVG element', async () => {
     const {screen, render} = await createDOM();
-    const customAttributeValue = 'Custom value';
+    const customId = 'icon-id';
 
-    await render(<Icon size={16} title="Title" fill="currentColor" {id: {customAttributeValue}} />);
+    await render(<Icon size={16} title="Title" fill="currentColor" id={customId} />);
     
     const svgElement = screen.querySelector('svg') as SVGSVGElement;
     console.log(svgElement.outerHTML);
-    expect(svgElement.getAttribute('data-custom')).toEqual(customAttributeValue);
+    expect(svgElement.getAttribute('id')).toEqual(customId);
   });
 });

@@ -16,20 +16,22 @@ export const build = async () => {
   await fs.remove('src/icons');
   await fs.mkdir('src/icons');
 
-  const indexEntries: string[] = ['/* IBM Carbon Design System Icons */', `/* Carbon icons version ${VERSION.replace(/[^~]/, '')} - built with ${name} version ${PKG_VERSION} */`];
+  const indexEntries: string[] = ['/* IBM Carbon Design System Icons */', 
+    `/* Carbon icons version ${VERSION.replace(/[^~]/, '')} - built with ${name} version ${PKG_VERSION} */`,
+  'export * from \'./types/icon-props\';'];
+  let iconsCount = 0;
 
-  const iconDefs = (metadata as BuildIcons).icons;
+  const iconDefs = (metadata as unknown as BuildIcons).icons;
   iconDefs.forEach(iconDef => {
     const fileName = `src/icons/${iconDef.name}.tsx`;
     const typeName = stripInvalidCharacters(toPascalCase(correctedFriendlyName(iconDef.name, iconDef.friendlyName)));
-    console.debug('Building', typeName);
     const defn32 = iconDef.assets.find(asset => asset.size === 32 || asset.size === 'glyph')!;
     const svgContent = defn32.optimized.data;
-    const componentDef = `import { component$ } from "@builder.io/qwik";
-import { IconProps } from "../types/icon-props";
+    const componentDef = `import { component$ } from '@builder.io/qwik';
+import { IconProps, IconPropsSvg } from '../types/icon-props';
 
 export const ${typeName} = component$((props: IconProps) => 
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width={(props.size ?? 32) + "px"} height={props.size ?? 32 + "px"} viewBox="0 0 32 32" fill="currentColor">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width={(props.size ?? 32) + "px"} height={props.size ?? 32 + "px"} viewBox="0 0 32 32" {...props as IconPropsSvg} fill={props.fill ?? 'currentColor'}>
     ${svgContent}
     {props.title && <title>{props.title}</title>}
   </svg>)`;
@@ -37,13 +39,14 @@ export const ${typeName} = component$((props: IconProps) =>
 
     const indexEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
     indexEntries.push(indexEntry);
+    iconsCount++;
   });
 
   await fs.remove('src/index.ts');
   fs.writeFile('src/index.ts', indexEntries.join('\n'));
 
   console.timeEnd(TIME_MARKER);
-  console.info('Icons built.');
+  console.info(`${iconsCount} icons built.`);
 };
 
 /**
