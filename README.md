@@ -9,7 +9,8 @@ This zero-dependency icon library provides the [Carbon Design System icons](http
 
 Inspired by [carbon-components-svelte](https://github.com/IBM/carbon-components-svelte) by Eric Liu.
 
-## [Icon Index](ICON_INDEX.md)
+## Icon Index
+See [Icon Index](ICON_INDEX.md)
 
 ## Installation
 Install the icons in your Qwik project as a development dependency:
@@ -66,6 +67,9 @@ Which will emit:
 
 ## Contributing
 See [Contributing](CONTRIBUTING.md)
+
+## Changelog
+See [CHANGELOG](CHANGELOG.md)
 
 ## Licence
 [Apache-2.0](LICENCE)
