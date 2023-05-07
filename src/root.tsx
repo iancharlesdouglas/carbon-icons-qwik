@@ -1,5 +1,5 @@
 import { Icon } from './components/icon/icon';
-import Add from './icons/add';
+import {Add} from './icons/add';
 import { Branch } from './icons/branch';
 
 export default () => {
