@@ -64,8 +64,8 @@ Which will emit:
 <svg id="edit_icon" class="highlighted">
 ```
 
-## Generating Icons
-To generate the icons to build them, run the tests - e.g. `pnpm test`.  Icons will be output to the `src/icons` folder and the `index.ts` file will be regenerated.  Then run `pnpm build`.
+## Contributing
+See [Contributing](CONTRIBUTING.md)
 
 ## Licence
 [Apache-2.0](LICENCE)
