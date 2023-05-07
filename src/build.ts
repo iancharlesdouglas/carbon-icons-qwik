@@ -44,7 +44,7 @@ export const ${typeName} = component$((props: IconProps) =>
 
     const indexTsEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
     indexTsEntries.push(indexTsEntry);
-    const indexDTsEntry = `export function ${typeName}(props: IconProps): Component<IconProps>;`
+    const indexDTsEntry = `declare function ${typeName}(props: IconProps): Component<IconProps>;`
     indexDTsEntries.push(indexDTsEntry);
     const indexMdEntry = `|${typeName}|${iconDef.friendlyName}|${iconDef.aliases.join(', ')}|${iconDef.category}|${iconDef.subcategory}`;
     indexMdEntries.push(indexMdEntry);
