@@ -24,6 +24,7 @@ declare module "@carbon/icons" {
     icons: ReadonlyArray<{
       name: string;
       friendlyName: string;
+      aliases: string[];
       namespace: [];
       assets: [
         {
@@ -39,6 +40,7 @@ declare module "@carbon/icons" {
       ];
       output: IconOutput[];
       category: string;
+      subcategory: string;
     }>;
   }
 }

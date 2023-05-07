@@ -1,47 +1,74 @@
-# Qwik Library ⚡️
+# carbon-icons-qwik
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik on GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+[![NPM][npm]][npm-url]
+![GitHub](https://img.shields.io/github/license/iancharlesdouglas/carbon-icons-qwik?color=262626&style=for-the-badge)
 
----
+> [Carbon Design System](https://github.com/carbon-design-system) SVG icons as Qwik components.  
 
-## Project Structure
+This zero-dependency icon library provides the [Carbon Design System icons](https://www.carbondesignsystem.com/guidelines/icons/library) as Qwik components.
 
-Inside your project, you'll see the following directories and files:
+Inspired by [carbon-components-svelte](https://github.com/IBM/carbon-components-svelte) by Eric Liu.
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
-```
+## [Icon Index](ICON_INDEX.md)
 
-- `src/components`: Recommended directory for components.
+## Installation
+Install the icons in your Qwik project as a development dependency:
+```sh
+# pnpm
+pnpm i -D carbon-icons-qwik
 
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
+# npm
+npm i -D carbon-icons-qwik
 
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
-
-```
-pnpm dev
+# Yarn
+yarn add -D carbon-icons-qwik
 ```
 
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
-
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
+## Usage
+### Basic
+In your Qwik component, import the desired icon - e.g. **Edit**:
+```typescript
+import { Edit } from 'carbon-icons-qwik';
 ```
-pnpm build
+Render it in your component's JSX:
+```jsx
+<div>
+  <Edit />
+</div>
 ```
+### Custom size
+Set the `size` property to `16`, `20`, `24` or `32` (default is `32`):
+```jsx
+<Edit size={24} />
+```
+
+ ### Title
+ Set the `title` as an accessibility enhancement (this will be rendered in most browsers as a tooltip):
+ ```jsx
+ <Edit title="Edit document" />
+ ```
+### Fill color
+The fill color can be set to any HTML color value using `fill` (default is `currentColor`):
+```jsx
+<Edit fill="red" />
+```
+Note that you can also set color using CSS - e.g. `svg { stroke: red }`.
+
+### General attributes
+You can apply any general HTML attribute to the icon component - e.g.:
+```jsx
+<Edit id="edit_icon" class="highlighted" />
+```
+Which will emit:
+```html
+<svg id="edit_icon" class="highlighted">
+```
+
+## Generating Icons
+To generate the icons to build them, run the tests - e.g. `pnpm test`.  Icons will be output to the `src/icons` folder and the `index.ts` file will be regenerated.  Then run `pnpm build`.
+
+## Licence
+[Apache-2.0](LICENCE)
+
+[npm]: https://img.shields.io/npm/v/carbon-icons-qwik.svg?color=262626&style=for-the-badge
+[npm-url]: https://npmjs.com/package/carbon-icons-qwik

@@ -16,9 +16,10 @@ export const build = async () => {
   await fs.remove('src/icons');
   await fs.mkdir('src/icons');
 
-  const indexEntries: string[] = ['/* IBM Carbon Design System Icons */', 
+  const indexTsEntries: string[] = ['/* IBM Carbon Design System Icons */', 
     `/* Carbon icons version ${VERSION.replace(/[^~]/, '')} - built with ${name} version ${PKG_VERSION} */`,
   'export * from \'./types/icon-props\';'];
+  const indexMdEntries: string[] = [];
   let iconsCount = 0;
 
   const iconDefs = (metadata as unknown as BuildIcons).icons;
@@ -37,14 +38,22 @@ export const ${typeName} = component$((props: IconProps) =>
   </svg>)`;
     fs.writeFile(fileName, componentDef);
 
-    const indexEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
-    indexEntries.push(indexEntry);
+    const indexTsEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
+    indexTsEntries.push(indexTsEntry);
+    const indexMdEntry = `|${typeName}|${iconDef.friendlyName}|${iconDef.aliases.join(', ')}|${iconDef.category}|${iconDef.subcategory}`;
+    indexMdEntries.push(indexMdEntry);
     iconsCount++;
   });
 
   await fs.remove('src/index.ts');
-  fs.writeFile('src/index.ts', indexEntries.join('\n'));
+  fs.writeFile('src/index.ts', indexTsEntries.join('\n'));
 
+  indexMdEntries.unshift('|-|-|-|-|-|');
+  indexMdEntries.unshift('|Icon Component|Friendly Name|Aliases|Category|Sub-category|');
+  indexMdEntries.unshift('');
+  indexMdEntries.unshift(`> ${iconsCount} icons from ${name}@${VERSION}`);
+  indexMdEntries.unshift('# Icon Index');
+  fs.writeFile('ICON_INDEX.md', indexMdEntries.join('\n'));
   console.timeEnd(TIME_MARKER);
   console.info(`${iconsCount} icons built.`);
 };
