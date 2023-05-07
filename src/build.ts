@@ -31,14 +31,17 @@ export const build = async () => {
     const componentDef = `import { component$ } from '@builder.io/qwik';
 import { IconProps, IconPropsSvg } from '../types/icon-props';
 
-export const ${typeName} = component$((props: IconProps) => 
+const ${typeName} = component$((props: IconProps) => 
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width={(props.size ?? 32) + "px"} height={props.size ?? 32 + "px"} viewBox="0 0 32 32" {...props as IconPropsSvg} fill={props.fill ?? 'currentColor'}>
     ${svgContent}
     {props.title && <title>{props.title}</title>}
-  </svg>)`;
+  </svg>)
+  
+export default ${typeName};
+`;
     fs.writeFile(fileName, componentDef);
 
-    const indexTsEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
+    const indexTsEntry = `export * from './${fileName.substring(4, fileName.length - 4)}';`;
     indexTsEntries.push(indexTsEntry);
     const indexMdEntry = `|${typeName}|${iconDef.friendlyName}|${iconDef.aliases.join(', ')}|${iconDef.category}|${iconDef.subcategory}`;
     indexMdEntries.push(indexMdEntry);
