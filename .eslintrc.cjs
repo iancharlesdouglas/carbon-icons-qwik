@@ -37,4 +37,9 @@ module.exports = {
     'no-console': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
   },
+  overrides: [
+    {
+      excludedFiles: "src/index.d.ts"
+    }
+  ]
 };
