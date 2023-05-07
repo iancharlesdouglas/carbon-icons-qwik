@@ -20,6 +20,9 @@ export const build = async () => {
     `/* Carbon icons version ${VERSION.replace(/[^~]/, '')} - built with ${name} version ${PKG_VERSION} */`,
   'export * from \'./types/icon-props\';'];
   const indexMdEntries: string[] = [];
+  const indexDTsEntries: string[] = [
+    'import { IconProps } from \'./src/types/icon-props\';',
+    'import { Component } from \'@builder.io/qwik\';'];
   let iconsCount = 0;
 
   const iconDefs = (metadata as unknown as BuildIcons).icons;
@@ -31,18 +34,18 @@ export const build = async () => {
     const componentDef = `import { component$ } from '@builder.io/qwik';
 import { IconProps, IconPropsSvg } from '../types/icon-props';
 
-const ${typeName} = component$((props: IconProps) => 
+export const ${typeName} = component$((props: IconProps) => 
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width={(props.size ?? 32) + "px"} height={props.size ?? 32 + "px"} viewBox="0 0 32 32" {...props as IconPropsSvg} fill={props.fill ?? 'currentColor'}>
     ${svgContent}
     {props.title && <title>{props.title}</title>}
   </svg>)
-  
-export default ${typeName};
 `;
     fs.writeFile(fileName, componentDef);
 
-    const indexTsEntry = `export * from './${fileName.substring(4, fileName.length - 4)}';`;
+    const indexTsEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
     indexTsEntries.push(indexTsEntry);
+    const indexDTsEntry = `export function ${typeName}(props: IconProps): Component<IconProps>;`
+    indexDTsEntries.push(indexDTsEntry);
     const indexMdEntry = `|${typeName}|${iconDef.friendlyName}|${iconDef.aliases.join(', ')}|${iconDef.category}|${iconDef.subcategory}`;
     indexMdEntries.push(indexMdEntry);
     iconsCount++;
@@ -50,6 +53,8 @@ export default ${typeName};
 
   await fs.remove('src/index.ts');
   fs.writeFile('src/index.ts', indexTsEntries.join('\n'));
+  await fs.remove('index.d.ts');
+  fs.writeFile('index.d.ts', indexDTsEntries.join('\n'));
 
   indexMdEntries.unshift('|-|-|-|-|-|');
   indexMdEntries.unshift('|Icon Component|Friendly Name|Aliases|Category|Sub-category|');
