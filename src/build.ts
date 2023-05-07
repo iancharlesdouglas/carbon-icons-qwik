@@ -21,7 +21,7 @@ export const build = async () => {
   'export * from \'./types/icon-props\';'];
   const indexMdEntries: string[] = [];
   const indexDTsEntries: string[] = [
-    'import { IconProps } from \'./src/types/icon-props\';',
+    'import { IconProps } from \'./types/icon-props\';',
     'import { Component } from \'@builder.io/qwik\';'];
   let iconsCount = 0;
 
@@ -53,8 +53,8 @@ export const ${typeName} = component$((props: IconProps) =>
 
   await fs.remove('src/index.ts');
   fs.writeFile('src/index.ts', indexTsEntries.join('\n'));
-  await fs.remove('index.d.ts');
-  fs.writeFile('index.d.ts', indexDTsEntries.join('\n'));
+  await fs.remove('src/index.d.ts');
+  fs.writeFile('src/index.d.ts', indexDTsEntries.join('\n'));
 
   indexMdEntries.unshift('|-|-|-|-|-|');
   indexMdEntries.unshift('|Icon Component|Friendly Name|Aliases|Category|Sub-category|');
