@@ -22,7 +22,8 @@ export const build = async () => {
   const indexMdEntries: string[] = [];
   const indexDTsEntries: string[] = [
     'import { IconProps } from \'./types/icon-props\';',
-    'import { Component } from \'@builder.io/qwik\';'];
+    'import { Component } from \'@builder.io/qwik\';',
+    'declare module \'carbon-components-qwik\';'];
   let iconsCount = 0;
 
   const iconDefs = (metadata as unknown as BuildIcons).icons;
