@@ -21,6 +21,7 @@ module.exports = {
     },
   },
   plugins: ['@typescript-eslint'],
+  ignorePatterns: ['**/*.d.ts', '.eslintrc.cjs'],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -37,10 +38,4 @@ module.exports = {
     'no-console': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
   },
-  // overrides: [
-  //   {
-  //     files: ['src/**/*.ts', './index.d.ts']
-  //     // excludedFiles: ['src/index.d.ts', './.eslintrc.cjs']
-  //   }
-  // ]
 };

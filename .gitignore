@@ -37,3 +37,11 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+src/build.d.ts
+src/build.test.d.ts
+src/casing.test.d.ts
+src/entry.dev.d.ts
+src/entry.ssr.d.ts
+src/root.d.ts
+src/components/icon/icon.d.ts
+src/types/icon-props.d.ts
