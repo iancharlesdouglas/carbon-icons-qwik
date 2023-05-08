@@ -1,12 +1,12 @@
 {
   "name": "carbon-icons-qwik",
-  "version": "11.19.0-11",
+  "version": "11.19.0-12",
   "license": "Apache-2.0",
   "description": "Carbon Design System SVG icons as Qwik components",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
-  "types": "lib-types/index.d.ts",
-  "typings": "lib-types/index.d.ts",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.qwik.mjs",
