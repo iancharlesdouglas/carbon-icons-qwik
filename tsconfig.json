@@ -9,6 +9,8 @@
     "strict": true,
     "declaration": true,
     "declarationDir": "lib-types",
+    "declarationMap": true,
+    "outDir": "lib",
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
