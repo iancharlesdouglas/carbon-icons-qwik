@@ -1,5 +1,5 @@
 /* IBM Carbon Design System Icons */
-/* Carbon icons version 11.25.0 - built with carbon-icons-qwik version 11.19.1 */
+/* Carbon icons version 11.25.0 - built with carbon-icons-qwik version 11.25.0-1 */
 export * from './types/icon-props';
 export { ThreeDCursor } from './icons/3D-Cursor';
 export { ThreeDCursorAlt } from './icons/3D-cursor--alt';
