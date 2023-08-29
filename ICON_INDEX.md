@@ -1,5 +1,5 @@
 # Icon Index
-> 2071 icons from carbon-icons-qwik@^11.19.0
+> 2103 icons from carbon-icons-qwik@^11.25.0
 
 |Icon Component|Friendly Name|Aliases|Category|Sub-category|
 |-|-|-|-|-|
@@ -291,6 +291,7 @@
 |ChartLine|Chart line|graph, chart line, line chart, bar, data|Organization|Data
 |ChartLineData|Chart line data|graph, chart line data, line data chart, bar, data|Organization|Data
 |ChartLineSmooth|Chart line smooth|chart line smooth, line smooth chart, chart, graph, data|Organization|Data
+|ChartLogisticRegression|Chart logistic regression|chart logistic regression, logistic regression chart, chart, graph, data|Organization|Data
 |ChartMarimekko|Chart Marimekko|chart Marimekko, Marimekko chart, chart, graph, data|Organization|Data
 |ChartMaximum|Chart maximum|chart maximum, graph, chart, data|Organization|Data
 |ChartMedian|Chart median|chart median, graph, chart, data|Organization|Data
@@ -491,6 +492,7 @@
 |CurrencyYen|Currency yen|currency, money, yen, finance, commerce|Enterprise|Commerce
 |Cursor1|Cursor 1|mouse, arrow, direction, mouse, click, pointer|Tools|Instruments
 |Cursor2|Cursor 2|mouse, arrow, direction, mouse, click, pointer|Tools|Instruments
+|CustomerService|Customer service|customer, inquiry, phone, support, chat, client, person, headset|Person|User
 |Cut|Cut|scissors, cutting, snip, trim, shear, clippers|Actions|Formatting
 |CutInHalf|Cut in half|cut, split, half, halve|Enterprise|Health
 |CutOut|Cut out|formatting, cut out, clip, clipping, coupon|Actions|Formatting
@@ -503,12 +505,14 @@
 |Data2|Data 2|connection, dot, numbers, metrics, characters|Organization|Data
 |DataBase|Data base|connection, data base, dot, numbers, metrics, characters|Organization|Data
 |DataBaseAlt|Data base alt|connection, data base alt, dot, numbers, metrics, characters|Organization|Data
+|DataCategorical|Data categorical|circle, triangle, square, data types, sort, data, category, definite, class, group, rank|Organization|Data
 |DataCenter|Data center|data, center, systems, physical, location, network|Organization|Systems
 |DataCheck|Data check|connection, dot, numbers, metrics, characters|Organization|Data
 |DataConnected|Data connected|connection, dot, numbers, metrics, characters|Organization|Data
 |DataError|Data error|connection, dot, numbers, metrics, characters|Organization|Data
 |DataFormat|Data format|connection, dot, numbers, metrics, characters, format|Organization|Data
 |DataReference|Data reference|connection, dot, numbers, metrics, characters|Organization|Data
+|DataRegular|Data regular|data, regular, normal, circle, dot|Organization|Data
 |DataSet|Data set|connection, dot, numbers, metrics, characters|Organization|Data
 |DataStructured|Data structured|connection, dot, numbers, metrics, characters|Organization|Data
 |DataUnstructured|Data unstructured|connection, dot, numbers, metrics, characters|Organization|Data
@@ -551,6 +555,7 @@
 |IBMDb2Database|IBM® Db2® Database|database, Db2®, RDBMS, relational database management system, store, analyze, retrieve|Organization|Systems
 |Debug|Debug|bug, beetle, insect, code bug|Tools|Technology
 |DecisionTree|Decision tree|decision, tree, hierarchy|Organization|Data
+|Delete|Delete||Actions|Operations
 |Delivery|Delivery|truck, delivery, transportation, shopping, van, shipping, ecommerce|Enterprise|Commerce
 |DeliveryAdd|Delivery add|truck, delivery, transportation, shopping, van, shipping, ecommerce, plus, add|Enterprise|Commerce
 |DeliveryParcel|Delivery parcel|delivery, transportation, shopping, parcel, shipping, ecommerce|Enterprise|Commerce
@@ -890,11 +895,17 @@
 |IBMMatch360|IBM® Match 360|Match 360|Enterprise|App catalogue
 |IBMMQ|IBM® MQ|middleware, messaging, queuing, message delivery, circles, dial, bullseye|Enterprise|App catalogue
 |IBMOpenEnterpriseLanguages|IBM® Open Enterprise Languages|Open Enterprise Languages, z16|Enterprise|App catalogue
+|ibmopenshiftcontainerplatformonvpcforregulatedindustries|ibm--openshift-container-platform-on-vpc-for-regulated-industries||Enterprise|App catalogue
 |IBMPowerVirtualServer|IBM Power® Virtual Server|virtual server, workloads, infrastructure, circles, bullseye, Power, Power solution, solution|Enterprise|App catalogue
+|ibmpowerwithvpc|ibm--power-with-vpc||Enterprise|App catalogue
+|ibmprivatepathservices|ibm--private-path-services||Enterprise|App catalogue
 |ibmprocessmining|ibm--process-mining||Enterprise|App catalogue
+|ibmsaponpower|ibm--sap-on-power||Enterprise|App catalogue
+|ibmsecureinfrastructureonvpcforregulatedindustries|ibm--secure-infrastructure-on-vpc-for-regulated-industries||Enterprise|App catalogue
 |IBMTelehealth|IBM® Telehealth|health, medical, physician, nurse, practitioner, video, mobile, doctor, healthcare, remote|Enterprise|App catalogue
 |ibmtenet|ibm--tenet||Enterprise|App catalogue
 |IBMOpenToolchainAPI|IBM® Open Toolchain API|open, API, application programming interface, wrench, chain|Enterprise|App catalogue
+|ibmvsionvpcforregulatedindustries|ibm--vsi-on-vpc-for-regulated-industries||Enterprise|App catalogue
 |IBMCloud|IBM Cloud®|product, cloud, hybrid, service, offering, online, internet, brand, smart rays, IBM Cloud|Brand|IBM
 |IBMCloudAppID|IBM Cloud® App ID|application, authentication, ID, service|Enterprise|App catalogue
 |CitrixDaaSForIBMCloud|Citrix DaaS for IBM Cloud®|cloud, workspaces, digital, automated, solution, VPC infrastructure, virtual public cloud, public cloud environment, IBM Cloud, squares|Enterprise|App catalogue
@@ -922,8 +933,11 @@
 |IBMCloudMassDataMigration|IBM Cloud® Mass Data Migration|data transfer, IBM Cloud, data migration, data, migration, cloud, up arrow|Enterprise|App catalogue
 |IBMCloudPatternAndAssetLibrary|IBM Cloud® Pattern and Asset Library|cloud, IBM Cloud, pattern library, asset library|Enterprise|App catalogue
 |IBMCloudPrivilegedAccessGateway|IBM Cloud® Privileged Access Gateway|access, remote, secure, access, server, cluster, restricted access|Enterprise|App catalogue
+|ibmcloudprojects|ibm-cloud--projects||Enterprise|App catalogue
+|ibmcloudresiliency|ibm-cloud--resiliency||Enterprise|App catalogue
 |IBMCloudSecretsManager|IBM Cloud® Secrets Manager|secrets manager, IBM Cloud, single tenant, secrets, access control, secrets management, user interface, access management, dial, circle|Enterprise|App catalogue
 |IBMCloudSecurityAndComplianceCenter|IBM Cloud® Security and Compliance Center|IBM Cloud®, security, compliance, center, app|Enterprise|App catalogue
+|ibmcloudsecuritycompliancecenterworkloadprotection|ibm-cloud--security-compliance-center-workload-protection||Enterprise|App catalogue
 |IBMCloudSubnets|IBM Cloud® subnets|subnets, cloud, hybrid, IBM Cloud®, internet, cloud|Enterprise|App catalogue
 |SysdigSecureOnIBMCloud|Sysdig Secure on IBM Cloud®|cloud, IBM Cloud, scanning, image scanning, automated scanning, analysis, container analysis, compliance, container compliance, containers, Kubernetes, CICD pipelines, security, incident response, security tool, monitor, computer monitor, shield|Enterprise|App catalogue
 |IBMCloudTransitGateway|IBM Cloud® Transit Gateway|IBM Cloud®, transit, gateway|Enterprise|App catalogue
@@ -957,7 +971,10 @@
 |IBMWatsonTextToSpeech|IBM Watson® Text to Speech|Watson, IBM Watson, speech to text, STT, speech recognition, speech transcription, agent assistance, speech analytics, machine learning, ML, customer self-service, virtual assistant, AI, artificial intelligence, automatic speech recognition, neural technology, conversation bubble, speech bubble, circle, text|Enterprise|App catalogue
 |IBMWatsonToneAnalyzer|IBM Watson® Tone Analyzer|Watson, IBM Watson, cloud, linguistic analysis, emotional tone detection, language tone detection, conversation bubbles, face emojis|Enterprise|App catalogue
 |IBMZCloudModernizationStack|IBM Z® Cloud Modernization Stack|cloud, modernization, IBM Z®, mainframe, app|Enterprise|App catalogue
+|ibmzenvironmentsdevsecops|ibm-z--environments-dev-sec-ops||Enterprise|App catalogue
 |IBMZAndCloudModernizationStackProvisioning|IBM Z® and Cloud Modernization Stack Provisioning|IBM Z®, cloud, provisioning, mainframe, app|Enterprise|App catalogue
+|ibmzosaicontrolinterface|ibm-z-os--ai-control-interface||Enterprise|App catalogue
+|ibmzoscontainers|ibm-z-os--containers||Enterprise|App catalogue
 |IBMZOSPackageManager|IBM® z/OS Package Manager|IBM Z®, cloud, mainframe, modernization, app|Enterprise|App catalogue
 |ICA2D|ICA 2D|ICA 2D, component, analysis, independent|Enterprise|Health
 |IceAccretion|Ice accretion|ice, accretion, ice dam, precipitation|Planning|Weather
@@ -1134,8 +1151,9 @@
 |LogoKubernetes|Logo Kubernetes|brand, emblem, logotype, symbol, id, avatar, tag, identification, Kubernetes, container|Brand|Design and development
 |LogoLinkedIn|Logo LinkedIn|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
 |LogoLivestream|Logo Livestream|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
+|LogoMastodon|Logo Mastodon|brand, emblem, logotype, symbol, id, avatar, tag, identification, elephant|Brand|Social
 |LogoMedium|Logo Medium|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
-|logonpm|logo--npm||Brand|Design and development
+|LogoNpm|Logo npm|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Design and development
 |LogoOpenShift|Logo OpenShift®|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Design and development
 |LogoPinterest|Logo Pinterest|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
 |LogoPython|Logo Python|python, programming, language, logotype, brand, emblem, symbol, id, avatar, tag, identification|Brand|Design and development
@@ -1330,6 +1348,7 @@
 |OverflowMenuVertical|Overflow menu vertical|show more, options, extra, hidden, navigation|Actions|Navigation
 |Overlay|Overlay|overlay, operations|Actions|Operations
 |Package|Package|download, kit, packet, assortment, bunch, load, group, operations|Actions|Operations
+|PackageTextAnalysis|Package text analysis|file, package, text, analysis|Organization|File
 |PageFirst|Page first|next, forward, backward, read, back, navigation|Actions|Navigation
 |PageLast|Page last|next, forward, backward, read, back, navigation|Actions|Navigation
 |PageBreak|Page break|page, break, formatting|Actions|Formatting
@@ -1344,6 +1363,11 @@
 |Paragraph|Paragraph|paragraph, formatting|Actions|Formatting
 |Parameter|Parameter|parameter, code, snippet, value, data|Organization|Data
 |ParentChild|Parent child|nested, relation, relationship, tree, org, data, hierarchy|Organization|Data
+|PartitionAuto|Partition auto|data, partition, auto, cycle|Organization|Data
+|PartitionCollection|Partition collection|data, partition, collection, gather, collect|Organization|Data
+|PartitionRepartition|Partition repartition|data, partition, repartition, refine|Organization|Data
+|PartitionSame|Partition same|data, partition, auto, duplicate, parallel|Organization|Data
+|PartitionSpecific|Partition specific|data, partition, specific, specify, select|Organization|Data
 |PartlyCloudy|Partly cloudy|partly-cloudy, weather, sky|Planning|Weather
 |PartlyCloudyNight|Partly cloudy night|partly-cloudy, weather, sky|Planning|Weather
 |Partnership|Partnership|relationship, handshake, people, business, user|Person|User
@@ -1493,9 +1517,11 @@
 |Restaurant|Restaurant|dining, knife, fork, utensil, dinner, food, cafe, eat|Planning|Travel
 |RestaurantFine|Restaurant fine|dining, knife, fork, utensil, dinner, food, cafe, eat|Planning|Travel
 |Result|Result|clipboard, result, file|Organization|File
+|ResultDraft|Result draft|clipboard, result, edit, document|Organization|File
 |ResultNew|Result new|clipboard, result, file, notification, new|Organization|File
 |ResultOld|Result old|clipboard, result, file, previous, old|Organization|File
 |RetryFailed|Retry failed|retry, failed, operations|Actions|Operations
+|Return|Return||Actions|Operations
 |Review|Review|review, reference, opinion, survey|Actions|Operations
 |Rewind10|Rewind 10|back, previous, past, reverse|Actions|Controls
 |Rewind30|Rewind 30|back, previous, past, reverse|Actions|Controls
@@ -1529,6 +1555,8 @@
 |RuleDataQuality|Rule data quality|rule, governance, control, policy, quality, security, shield, data|Organization|File
 |RuleDraft|Rule draft|rule, governance, control, policy, draft, security, shield|Organization|File
 |RuleFilled|Rule filled|rule, governance, control, policy, filled, security, shield|Organization|File
+|RuleLocked|Rule locked|rule, governance, control, policy, quality, security, shield, lock, data|Organization|File
+|RulePartial|Rule partial|rule, governance, control, policy, quality, security, shield, data, incomplete|Organization|File
 |RuleTest|Rule test|rule, governance, control, policy, test, security, shield|Organization|File
 |Ruler|Ruler|measure, tool, school, office, length, scale|Tools|Instruments
 |RulerAlt|Ruler alt|measure, tool, school, office, length, scale|Tools|Instruments
@@ -1729,6 +1757,7 @@
 |Sun|Sun|sun, solar|Planning|Weather
 |Sunrise|Sunrise|sunrise|Planning|Weather
 |Sunset|Sunset|sunset|Planning|Weather
+|supportvectormachine|support-vector-machine||Organization|Data
 |SVG|SVG|format, image, vector|Organization|File
 |Swim|Swim|travel, sports|Planning|Travel
 |SwitchLayer2|Switch layer 2|switch, layer|Organization|Systems
@@ -1952,6 +1981,9 @@
 |VehicleInsights|Vehicle insights|vehicle, car, log, data|Organization|Systems
 |VehicleServices|Vehicle services|vehicle, car, services, wrench, maintenance, repair|Organization|Systems
 |Version|Version|file, document, version|Organization|File
+|versionmajor|version--major||Organization|File
+|versionminor|version--minor||Organization|File
+|versionpatch|version--patch||Organization|File
 |VerticalView|Vertical view|Vertical, view, orientation, formatting|Actions|Formatting
 |Video|Video|camera, recorder, movie|Actions|Toggle
 |VideoAdd|Video add|camera, recorder, movie|Actions|Controls

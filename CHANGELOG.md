@@ -7,6 +7,12 @@ Versioning is synchronised with the versioning of the Carbon Design System Icons
 (The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).)
 
+## [11.25.0](https://github.com/iancharlesdouglas/carbon-icons-qwik/releases/tag/11.25.0) - 2023-08-29
+
+|Added|Fixed|Changed|Removed|
+|-|-|-|-|
+|-|-|Updated icons to latest version; updated dependencies|-|
+
 ## [11.19.1](https://github.com/iancharlesdouglas/carbon-icons-qwik/releases/tag/11.19.1) - 2023-05-08
 
 |Added|Fixed|Changed|Removed|
