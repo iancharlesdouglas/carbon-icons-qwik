@@ -14,7 +14,7 @@ export type IconPropsSvg = HTMLAttributes<HTMLElement> & {
  * @property title - Optional title to include within SVG for accessibility purposes
  */
 export type IconProps = IconPropsSvg & {
-  size?: 16 | 20 | 24 | 32;
+  size?: 12 | 16 | 20 | 24 | 32;
   title?: string;
 }
 

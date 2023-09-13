@@ -1,5 +1,5 @@
 # Icon Index
-> 2103 icons from carbon-icons-qwik@^11.25.0
+> 2150 icons from carbon-icons-qwik@^11.26.0
 
 |Icon Component|Friendly Name|Aliases|Category|Sub-category|
 |-|-|-|-|-|
@@ -18,7 +18,7 @@
 |Accessibility|Accessibility|wheelchair, convenience, accessible|Person|User
 |AccessibilityAlt|Accessibility alt|wheelchair, convenience, accessible, user accessibility, handicap, handicapped, handicap accessibility, user|Person|User
 |AccessibilityColor|Accessibility color|wheelchair, wheelchair accessible, convenience, accessible, accessibility color, user accessibility, handicap, handicapped, handicap accessibility, handicap accessible, user|Person|User
-|AccessibilityColorFilled|Accessibility color filled|wheelchair, wheelchair acessible, convenience, accessible, accessiblity color filled, user accessibility, handicap, handicapped, handicap accessibility, handicap accessible, user|Person|User
+|AccessibilityColorFilled|Accessibility color filled|wheelchair, wheelchair Accessible, convenience, accessible, accessiblity color filled, user accessibility, handicap, handicapped, handicap accessibility, handicap accessible, user|Person|User
 |Account|Account|account, commerce, report, narrative, record, documentation|Enterprise|Commerce
 |AccumulationIce|Accumulation ice|gauge, measurement, quantity, accumulation, ice, weather, record, measure, precipitation|Planning|Weather
 |AccumulationPrecipitation|Accumulation precipitation|gauge, measurement, quantity, accumulation, precipitation, weather, record, measure|Planning|Weather
@@ -28,6 +28,7 @@
 |Add|Add|plus, positive, addition, increase, navigation, include, plus sign|Actions|Navigation
 |AddAlt|Add alt|plus, positive, addition, increase, navigation, include, plus sign|Actions|Navigation
 |AddFilled|Add filled|plus, positive, addition, increase, navigation, include, plus sign, plus sign filled|Actions|Navigation
+|addlarge|add--large||Actions|Navigation
 |AddComment|Add comment|add, comment, chat, bubble, operations, comment bubble, add comment, remark, add remark|Actions|Operations
 |AgricultureAnalytics|Agriculture analytics|agriculture, analytics, farming, food, production, analysis, charts, record|Planning|Weather
 |AIResults|AI results|ai, results, health, watson|Enterprise|Health
@@ -192,6 +193,7 @@
 |Bullhorn|Bullhorn|announcement, announce, broadcast, news, release, notify, decare, blast, speaker, bullhorn, instruments|Tools|Instruments
 |Buoy|Buoy|weather, buoy, forecast, marker|Planning|Weather
 |Bus|Bus|transport, transportation, travel, public, bus|Planning|Travel
+|businessprocesses|business-processes||Tools|Technology
 |ButtonCentered|Button centered|formatting, button, centered|Actions|Formatting
 |ButtonFlushleft|Button flush-left|formatting, button, flush-left|Actions|Formatting
 |CabinCare|Cabin care|cabin, care, transportation, airline, flight, customer service, attendant|Planning|Travel
@@ -220,6 +222,7 @@
 |CarbonAccounting|Carbon accounting|carbon, accounting, CO2, footprint, weather|Planning|Weather
 |CarbonForIBMDotcom|Carbon for IBM dotcom|carbon, IBM, digital, web, IBM Carbon, web design system, IBM digital design system, design, hexagon|Brand|IBM
 |CarbonForIBMProduct|Carbon for IBM product|carbon, IBM, digital, product, IBM Carbon, product design system, IBM product design system, design, hexagon|Brand|IBM
+|carbonformobile|carbon-for-mobile||Brand|IBM
 |CaretDown|Caret down|pointer, open, close, expand, collapse, daret, down caret, down arrow, down triangle|Actions|Navigation
 |CaretLeft|Caret left|pointer, open, close, expand, collapse, caret, left caret, left arrow, left triangle|Actions|Navigation
 |CaretRight|Caret right|pointer, open, close, expand, collapse, caret, right caret, right arrow, right triangle|Actions|Navigation
@@ -283,6 +286,7 @@
 |ChartCombo|Chart combo|chart combo, combo chart, chart, graph, data|Organization|Data
 |ChartComboStacked|Chart combo stacked|chart combo stacked, combo stacked chart, chart, graph, data|Organization|Data
 |ChartCustom|Chart custom|chart custom, custom chart, chart, pencil, graph, data|Organization|Data
+|chartdualyaxis|chart--dual-y-axis||Organization|Data
 |ChartErrorBar|Chart error bar|chart error bar, error bar chart, chart, graph, data|Organization|Data
 |ChartErrorBarAlt|Chart error bar alt|chart error bar alt, alt error bar chart, chart, graph, data|Organization|Data
 |ChartEvaluation|Chart evaluation|chart evaluation, evaluation chart, chart, graph, data|Organization|Data
@@ -378,6 +382,7 @@
 |Clean|Clean|clean, sweep, broom|Actions|Operations
 |Close|Close|X, dismiss, deny, denied, ex|Actions|Navigation
 |CloseFilled|Close filled|X, dismiss, deny, denied, ex|Actions|Navigation
+|closelarge|close--large||Actions|Navigation
 |CloseOutline|Close outline|X, dismiss, deny, denied, ex|Actions|Navigation
 |ClosedCaption|Closed caption|caption, closed, cc|Organization|File
 |ClosedCaptionAlt|Closed caption alt|caption, closed, cc|Organization|File
@@ -515,6 +520,7 @@
 |DataRegular|Data regular|data, regular, normal, circle, dot|Organization|Data
 |DataSet|Data set|connection, dot, numbers, metrics, characters|Organization|Data
 |DataStructured|Data structured|connection, dot, numbers, metrics, characters|Organization|Data
+|dataunreal|data--unreal||Organization|Data
 |DataUnstructured|Data unstructured|connection, dot, numbers, metrics, characters|Organization|Data
 |DataView|Data view|connection, dot, numbers, metrics, characters, view|Organization|Data
 |DataViewAlt|Data view alt|data, view, alternative|Organization|Data
@@ -544,6 +550,7 @@
 |IBMCloudDatabasesForDataStax|IBM Cloud® Databases for DataStax|enterprise, datastax, database, app, catalog, catalogue|Enterprise|App catalogue
 |IBMCloudDatabasesForElasticsearch|IBM Cloud® Databases for Elasticsearch|enterprise, elastic, database, app, catalog, catalogue|Enterprise|App catalogue
 |IBMCloudDatabasesForEnterpriseDB|IBM Cloud® Databases for EnterpriseDB|enterprise, database, Db, app, catalog, catalogue|Enterprise|App catalogue
+|databaseenterprisedb|database--enterprisedb||Enterprise|App catalogue
 |IBMCloudDatabasesForEtcd|IBM Cloud® Databases for etcd|enterprise, database, etcd, app, catalog, catalogue|Enterprise|App catalogue
 |IBMCloudDatabasesForMongoDB|IBM Cloud® Databases for MongoDB|enterprise, database, MongoDB, app, catalog, catalogue|Enterprise|App catalogue
 |IBMCloudDatabasesForPostgreSQL|IBM Cloud® Databases for PostgreSQL|enterprise, database, PostgreSQL, app, catalog, catalogue|Enterprise|App catalogue
@@ -829,6 +836,7 @@
 |GeneratePdf|Generate pdf|generate pdf, create pdf, export pdf|Organization|File
 |GIF|GIF|file, file type, move, GIF|Organization|File
 |Gift|Gift|gift, present, box, wrapped box|Enterprise|Commerce
+|globalloanandtrial|global-loan-and-trial||Organization|Data
 |Globe|Globe|planet, earth, world, map, orb, globe|Planning|Travel
 |Gradient|Gradient|gradient, fade, blend|Actions|Formatting
 |GraphicalDataFlow|Graphical data flow|graphical data flow, data flow, graphics|Organization|Data
@@ -886,28 +894,43 @@
 |Hurricane|Hurricane|hurricane, storm, weather, forecast|Planning|Weather
 |HybridNetworking|Hybrid networking|hybrid networking, networking, linking, interactive|Organization|Data
 |HybridNetworkingAlt|Hybrid networking alt|hybrid networking, networking, linking, interactive|Organization|Systems
+|ibmaionz|ibm--ai-on-z||Enterprise|App catalogue
+|ibmaiopsinsights|ibm--aiops-insights||Enterprise|App catalogue
 |ibmbluepay|ibm--bluepay||Enterprise|App catalogue
+|ibmcloudant|ibm--cloudant||Enterprise|App catalogue
 |IBMContentServices|IBM® Content Services|content management, SaaS|Enterprise|App catalogue
 |IBMDataReplication|IBM® Data Replication|data, replication|Enterprise|App catalogue
 |IBMDataStage|IBM® DataStage®|ETL tool, DataStage, data integration, box, arrow, extract, transform, load, software|Enterprise|App catalogue
 |IBMDb2|IBM® Db2®|database, RDBMS, relational database management system|Enterprise|App catalogue
 |IBMDb2Alt|IBM® Db2® alt|database, RDBMS, relational database management system|Enterprise|App catalogue
+|ibmdb2warehouse|ibm--db2-warehouse||Enterprise|App catalogue
+|ibmeventautomation|ibm--event-automation||Enterprise|App catalogue
+|ibmeventendpointmgmt|ibm--event-endpoint-mgmt||Enterprise|App catalogue
+|ibmeventprocessing|ibm--event-processing||Enterprise|App catalogue
+|ibmeventstreams|ibm--event-streams||Enterprise|App catalogue
 |IBMMatch360|IBM® Match 360|Match 360|Enterprise|App catalogue
 |IBMMQ|IBM® MQ|middleware, messaging, queuing, message delivery, circles, dial, bullseye|Enterprise|App catalogue
 |IBMOpenEnterpriseLanguages|IBM® Open Enterprise Languages|Open Enterprise Languages, z16|Enterprise|App catalogue
 |ibmopenshiftcontainerplatformonvpcforregulatedindustries|ibm--openshift-container-platform-on-vpc-for-regulated-industries||Enterprise|App catalogue
 |IBMPowerVirtualServer|IBM Power® Virtual Server|virtual server, workloads, infrastructure, circles, bullseye, Power, Power solution, solution|Enterprise|App catalogue
+|ibmpowervsprivatecloud|ibm--power-vs-private-cloud||Enterprise|App catalogue
 |ibmpowerwithvpc|ibm--power-with-vpc||Enterprise|App catalogue
 |ibmprivatepathservices|ibm--private-path-services||Enterprise|App catalogue
 |ibmprocessmining|ibm--process-mining||Enterprise|App catalogue
+|ibmsaasconsole|ibm--saas-console||Enterprise|App catalogue
 |ibmsaponpower|ibm--sap-on-power||Enterprise|App catalogue
 |ibmsecureinfrastructureonvpcforregulatedindustries|ibm--secure-infrastructure-on-vpc-for-regulated-industries||Enterprise|App catalogue
 |IBMTelehealth|IBM® Telehealth|health, medical, physician, nurse, practitioner, video, mobile, doctor, healthcare, remote|Enterprise|App catalogue
 |ibmtenet|ibm--tenet||Enterprise|App catalogue
 |IBMOpenToolchainAPI|IBM® Open Toolchain API|open, API, application programming interface, wrench, chain|Enterprise|App catalogue
+|ibmturbonomic|ibm--turbonomic||Enterprise|App catalogue
+|ibmvpnforvpc|ibm--vpn-for-vpc||Enterprise|App catalogue
 |ibmvsionvpcforregulatedindustries|ibm--vsi-on-vpc-for-regulated-industries||Enterprise|App catalogue
+|ibmwazideploy|ibm--wazi-deploy||Enterprise|App catalogue
 |IBMCloud|IBM Cloud®|product, cloud, hybrid, service, offering, online, internet, brand, smart rays, IBM Cloud|Brand|IBM
 |IBMCloudAppID|IBM Cloud® App ID|application, authentication, ID, service|Enterprise|App catalogue
+|ibmcloudbaremetalserver|ibm-cloud--bare-metal-server||Enterprise|App catalogue
+|ibmcloudbaremetalserversvpc|ibm-cloud--bare-metal-servers-vpc||Enterprise|App catalogue
 |CitrixDaaSForIBMCloud|Citrix DaaS for IBM Cloud®|cloud, workspaces, digital, automated, solution, VPC infrastructure, virtual public cloud, public cloud environment, IBM Cloud, squares|Enterprise|App catalogue
 |IBMCloudContinuousDelivery|IBM Cloud® Continuous Delivery|provision, toolchains, automate builds, automate tests, quality control, analytics|Enterprise|App catalogue
 |IBMCloudDedicatedHost|IBM Cloud® Dedicated Host|product, cloud, hybrid, IBM Cloud®, dedicated, host, cloud|Enterprise|App catalogue
@@ -921,6 +944,7 @@
 |IBMCloudEventNotifications|IBM Cloud® Event Notifications|cloud, service, event notification, routing service, solution, routing, alert routing, IBM Cloud, automatic actions, webhooks, communication channels, communications, governance, spokes, circles|Enterprise|App catalogue
 |IBMCloudEventStreams|IBM Cloud® Event Streams|cloud, service, event streaming, platform, solution, endpoint management, workloads, IBM Cloud, user experiences, analytics, real-time analytics, predictive analytics, connectivity, event-driven architecture, spokes, circles, caption bubble|Enterprise|App catalogue
 |IBMCloudForEducation|IBM Cloud® for Education|computing environment, academic, infrastructure|Enterprise|App catalogue
+|ibmcloudhpc|ibm-cloud--hpc||Enterprise|App catalogue
 |IBMCloudHSM|IBM Cloud® HSM|hardware security module, cryptographic infrastructure, cyrpto key, life cycle, security, crypto storage, crypto management, crypto processing|Enterprise|App catalogue
 |IBMCloudHyperProtectCryptoServices|IBM Cloud® Hyper Protect Crypto Services|cloud, service, hybrid cloud, key management, multikey management, solution, single tenant, protection, IBM Cloud, data encryption, security, key orchestration, multicloud, key control, key, shield|Enterprise|App catalogue
 |IBMCloudHyperProtectDBaaS|IBM Cloud® Hyper Protect DBaaS|cloud, database, cloud database environment, multiple database management, DBaaS, database as a service, database management, provisioning, IBM Cloud, database maintenance, security, database monitoring, confidential computing, database, database environment, data workloads, shield, stack|Enterprise|App catalogue
@@ -941,6 +965,9 @@
 |IBMCloudSubnets|IBM Cloud® subnets|subnets, cloud, hybrid, IBM Cloud®, internet, cloud|Enterprise|App catalogue
 |SysdigSecureOnIBMCloud|Sysdig Secure on IBM Cloud®|cloud, IBM Cloud, scanning, image scanning, automated scanning, analysis, container analysis, compliance, container compliance, containers, Kubernetes, CICD pipelines, security, incident response, security tool, monitor, computer monitor, shield|Enterprise|App catalogue
 |IBMCloudTransitGateway|IBM Cloud® Transit Gateway|IBM Cloud®, transit, gateway|Enterprise|App catalogue
+|ibmcloudvirtualserverclassic|ibm-cloud--virtual-server-classic||Enterprise|App catalogue
+|ibmcloudvirtualservervpc|ibm-cloud--virtual-server-vpc||Enterprise|App catalogue
+|ibmcloudvpc|ibm-cloud--vpc||Enterprise|App catalogue
 |IBMCloudVPCEndpoints|IBM Cloud® VPC endpoints|virtual private cloud, VPC, endpoints, cloud, hybrid, IBM Cloud®, internet, cloud|Enterprise|App catalogue
 |IBMCloudPakForApplications|IBM Cloud Pak® for Applications|enterprise, app, applications, IBM Cloud Pak®, cloud, hybrid, internet|Enterprise|App catalogue
 |IBMCloudPakForBusinessAutomation|IBM Cloud Pak® for Business Automation|enterprise, app, automation, IBM Cloud Pak®, cloud, hybrid|Enterprise|App catalogue
@@ -970,9 +997,14 @@
 |IBMWatsonStudio|IBM Watson® Studio|Watson, IBM Watson, cloud, AI on cloud building, AI on cloud scaling, AI model building, AI model management, AI model running, AI lifecycle automation, ModelOps, lifecycle management, lifecycle governance, MLOps, AI algorithms, outcome predictions, natural language interface, text, arrow, right arrow|Enterprise|App catalogue
 |IBMWatsonTextToSpeech|IBM Watson® Text to Speech|Watson, IBM Watson, speech to text, STT, speech recognition, speech transcription, agent assistance, speech analytics, machine learning, ML, customer self-service, virtual assistant, AI, artificial intelligence, automatic speech recognition, neural technology, conversation bubble, speech bubble, circle, text|Enterprise|App catalogue
 |IBMWatsonToneAnalyzer|IBM Watson® Tone Analyzer|Watson, IBM Watson, cloud, linguistic analysis, emotional tone detection, language tone detection, conversation bubbles, face emojis|Enterprise|App catalogue
+|ibmwatsonxassistant|ibm-watsonx--assistant||Enterprise|App catalogue
+|ibmwatsonxcodeassistant|ibm-watsonx--code-assistant||Enterprise|App catalogue
+|ibmwatsonxcodeassistantforz|ibm-watsonx--code-assistant-for-z||Enterprise|App catalogue
+|ibmwatsonxorchestrate|ibm-watsonx--orchestrate||Enterprise|App catalogue
 |IBMZCloudModernizationStack|IBM Z® Cloud Modernization Stack|cloud, modernization, IBM Z®, mainframe, app|Enterprise|App catalogue
 |ibmzenvironmentsdevsecops|ibm-z--environments-dev-sec-ops||Enterprise|App catalogue
 |IBMZAndCloudModernizationStackProvisioning|IBM Z® and Cloud Modernization Stack Provisioning|IBM Z®, cloud, provisioning, mainframe, app|Enterprise|App catalogue
+|ibmzos|ibm-z-os||Enterprise|App catalogue
 |ibmzosaicontrolinterface|ibm-z-os--ai-control-interface||Enterprise|App catalogue
 |ibmzoscontainers|ibm-z-os--containers||Enterprise|App catalogue
 |IBMZOSPackageManager|IBM® z/OS Package Manager|IBM Z®, cloud, mainframe, modernization, app|Enterprise|App catalogue
@@ -1143,6 +1175,7 @@
 |LogoFigma|Logo Figma|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Design and development
 |LogoFlickr|Logo Flickr|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
 |LogoGitHub|Logo GitHub|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
+|logogitlab|logo--gitlab||Brand|Design and development
 |LogoGlassdoor|Logo Glassdoor|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
 |LogoInstagram|Logo Instagram|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Social
 |LogoInvision|Logo Invision|brand, emblem, logotype, symbol, id, avatar, tag, identification|Brand|Design and development
@@ -1235,6 +1268,7 @@
 |Model|Model|reference, 3d, prototype, sketch, illustrate, assemble, fabricate, manufacture, construct|Organization|File
 |ModelAlt|Model alt|model alt, data, prototype, sketch, illustrate, assemble, fabricate, manufacture, construct|Organization|File
 |ModelReference|Model reference|reference, 3d, prototype, sketch, illustrate, assemble, fabricate, manufacture, construct|Organization|File
+|modeltuned|model--tuned||Tools|Technology
 |ModelBuilder|Model builder|model builder, analytics, analysis|Organization|Data
 |ModelBuilderReference|Model builder reference|model builder reference, analytics, analysis, citation, source|Organization|Data
 |Money|Money|money, currency, cash|Enterprise|Commerce
@@ -1458,6 +1492,7 @@
 |ProgressBar|Progress bar|progress bar, loading|Organization|Data
 |ProgressBarRound|Progress bar round|progreess bar round, loading|Organization|Data
 |Promote|Promote|operations, launch, promote, rocket ship, arrow|Actions|Operations
+|promptsession|prompt-session||Tools|Technology
 |PropertyRelationship|Property relationship|property, relationship, systems|Organization|Systems
 |Purchase|Purchase|charge, card, credit card, debit|Enterprise|Commerce
 |QCLaunch|QC launch|QC, launch, Watson Health®|Enterprise|Health
@@ -1623,6 +1658,7 @@
 |Settings|Settings|preferences, options, alternatives, gear|Actions|Controls
 |SettingsAdjust|Settings adjust|preferences, options, alternatives, gear, controls|Actions|Controls
 |SettingsCheck|Settings check|settings, controls, check|Actions|Controls
+|settingsedit|settings--edit||Actions|Controls
 |SettingsServices|Settings services|settings, controls, services, gear|Actions|Controls
 |SettingsView|Settings view|settings, controls, view, gear, eye|Actions|Controls
 |ShapeExcept|Shape except|shape except, format|Actions|Formatting
@@ -1752,12 +1788,14 @@
 |SubnetACLRules|Subnet ACL rules|lock, ACL, rules, network|Organization|Systems
 |Subtract|Subtract|minus, remove, deduct, withold, decrease, diminish, discount, remove, take, delete|Actions|Navigation
 |SubtractAlt|Subtract alt|minus, remove, deduct, withold, decrease, diminish, discount, remove, take, delete|Actions|Navigation
+|subtractlarge|subtract--large||Actions|Navigation
 |SummaryKPI|Summary KPI|summary KPI, data|Organization|Data
 |summaryKPImirror|summary--KPI--mirror|summary KPI, data, mirror|Organization|Data
 |Sun|Sun|sun, solar|Planning|Weather
 |Sunrise|Sunrise|sunrise|Planning|Weather
 |Sunset|Sunset|sunset|Planning|Weather
 |supportvectormachine|support-vector-machine||Organization|Data
+|sustainability|sustainability||Enterprise|Commerce
 |SVG|SVG|format, image, vector|Organization|File
 |Swim|Swim|travel, sports|Planning|Travel
 |SwitchLayer2|Switch layer 2|switch, layer|Organization|Systems
@@ -1835,9 +1873,11 @@
 |TextKerning|Text kerning|letter, typography, alphabet, editor|Actions|Formatting
 |TextLeading|Text leading|letter, typography, alphabet, editor|Actions|Formatting
 |TextLineSpacing|Text line spacing|letter, typography, alphabet, editor|Actions|Formatting
+|textlongparagraph|text--long-paragraph||Actions|Formatting
 |TextNewLine|Text new line|letter, typography, alphabet, editor|Actions|Formatting
 |TextScale|Text scale|letter, typography, alphabet, editor|Actions|Formatting
 |TextSelection|Text selection|letter, typography, alphabet, editor|Actions|Formatting
+|textshortparagraph|text--short-paragraph||Actions|Formatting
 |TextSmallCaps|Text small caps|letter, typography, alphabet, editor|Actions|Formatting
 |TextStrikethrough|Text strikethrough|letter, typography, alphabet, editor|Actions|Formatting
 |TextSubscript|Text subscript|letter, typography, alphabet, editor|Actions|Formatting
@@ -1919,6 +1959,7 @@
 |tsq|tsq||Organization|Systems
 |Tsunami|Tsunami|weather, forecast, storm, tropical storm, wave|Planning|Weather
 |TSV|TSV|format, data, database, spreadsheet|Organization|File
+|tuning|tuning||Tools|Technology
 |TwofactorAuthentication|Two-factor authentication|2FA, two factor, authentication, ID, identity, security, password, access|Organization|Systems
 |TwopersonLift|Two-person lift|two person lift, packaging, handling, commerce|Enterprise|Commerce
 |TXT|TXT|text, format, string|Organization|File
@@ -1976,6 +2017,8 @@
 |ValueVariable|Value variable|value, figure, amount, number, variable|Organization|Data
 |Van|Van|vehicle, car, delivery, truck, cargo|Planning|Travel
 |VegetationAsset|Vegetation asset|vegetation, asset, tree, resource|Planning|Weather
+|vegetationencroachment|vegetation--encroachment||Planning|Weather
+|vegetationheight|vegetation--height||Planning|Weather
 |VehicleAPI|Vehicle API|vehicle, car, application, app, programming, interface, API|Organization|Systems
 |VehicleConnected|Vehicle connected|vehicle, car, signal, interface, wireless|Organization|Systems
 |VehicleInsights|Vehicle insights|vehicle, car, log, data|Organization|Systems
@@ -2041,6 +2084,10 @@
 |Watch|Watch|time, clock|Tools|Technology
 |Watson|Watson™|ai|Brand|IBM
 |WatsonMachineLearning|IBM Watson® Machine Learning|ai|Brand|IBM
+|watsonx|watsonx||Brand|IBM
+|watsonxai|watsonx-ai||Brand|IBM
+|watsonxdata|watsonx-data||Brand|IBM
+|watsonxgovernance|watsonx-governance||Brand|IBM
 |WaveDirection|Wave direction|weather, wave, direction, forecast|Planning|Weather
 |WaveHeight|Wave height|weather, wave, height, forecast|Planning|Weather
 |WavePeriod|Wave period|weather, wave, period, forecast|Planning|Weather
