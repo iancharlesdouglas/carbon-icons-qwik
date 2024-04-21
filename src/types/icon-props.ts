@@ -4,7 +4,7 @@ import { HTMLAttributes } from "@builder.io/qwik";
  * SVG element props
  * @property fill - Fill - "currentColor" (default) or an HTML color value
  */
-export type IconPropsSvg = HTMLAttributes<HTMLElement> & {
+export type IconPropsSvg = HTMLAttributes<SVGSVGElement> & {
   fill?: string;
 }
 

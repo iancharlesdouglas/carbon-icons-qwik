@@ -1,36 +1,39 @@
-import fs from 'fs-extra';
-import {BuildIcons} from '@carbon/icons';
-import {name, version as PKG_VERSION, devDependencies} from '../package.json';
-import metadata from '@carbon/icons/metadata.json';
+import fs from "fs-extra";
+import { BuildIcons } from "@carbon/icons";
+import { name, version as PKG_VERSION, devDependencies } from "../package.json";
+import metadata from "@carbon/icons/metadata.json";
 
-const VERSION = devDependencies['@carbon/icons'];
+const VERSION = devDependencies["@carbon/icons"];
 
 /**
  * Builds the icons
  */
 export const build = async () => {
-  const TIME_MARKER = 'Built in';
-  console.info('Building icons....');
+  const TIME_MARKER = "Built in";
+  console.info("Building icons....");
   console.time(TIME_MARKER);
-  
-  await fs.remove('src/icons');
-  await fs.mkdir('src/icons');
 
-  const indexTsEntries: string[] = ['/* IBM Carbon Design System Icons */', 
-    `/* Carbon icons version ${VERSION.replace(/[^~]/, '')} - built with ${name} version ${PKG_VERSION} */`,
-  'export * from \'./types/icon-props\';'];
+  await fs.remove("src/icons");
+  await fs.mkdir("src/icons");
+
+  const indexTsEntries: string[] = [
+    "/* IBM Carbon Design System Icons */",
+    `/* Carbon icons version ${VERSION.replace(/[^~]/, "")} - built with ${name} version ${PKG_VERSION} */`,
+    "export * from './types/icon-props';",
+  ];
   const indexMdEntries: string[] = [];
   const indexDTsEntries: string[] = [
-    'import { IconProps } from \'./types/icon-props\';',
-    'import { Component } from \'@builder.io/qwik\';',
-    'declare module \'carbon-components-qwik\';'];
+    "import { IconProps } from './types/icon-props';",
+    "import { Component } from '@builder.io/qwik';",
+    "declare module 'carbon-components-qwik';",
+  ];
   let iconsCount = 0;
 
   const iconDefs = (metadata as unknown as BuildIcons).icons;
   iconDefs.forEach(iconDef => {
     const fileName = `src/icons/${iconDef.name}.tsx`;
     const typeName = stripInvalidCharacters(toPascalCase(correctedFriendlyName(iconDef.name, iconDef.friendlyName)));
-    const defn32 = iconDef.assets.find(asset => asset.size === 32 || asset.size === 'glyph')!;
+    const defn32 = iconDef.assets.find(asset => asset.size === 32 || asset.size === "glyph")!;
     const svgContent = defn32.optimized.data;
     const componentDef = `import { component$ } from '@builder.io/qwik';
 import { IconProps, IconPropsSvg } from '../types/icon-props';
@@ -45,24 +48,24 @@ export const ${typeName} = component$((props: IconProps) =>
 
     const indexTsEntry = `export { ${typeName} } from './${fileName.substring(4, fileName.length - 4)}';`;
     indexTsEntries.push(indexTsEntry);
-    const indexDTsEntry = `declare function ${typeName}(props: IconProps): Component<IconProps>;`
+    const indexDTsEntry = `declare function ${typeName}(props: IconProps): Component<IconProps>;`;
     indexDTsEntries.push(indexDTsEntry);
-    const indexMdEntry = `|${typeName}|${iconDef.friendlyName}|${iconDef.aliases.join(', ')}|${iconDef.category}|${iconDef.subcategory}`;
+    const indexMdEntry = `|${typeName}|${iconDef.friendlyName}|${iconDef.aliases.join(", ")}|${iconDef.category}|${iconDef.subcategory}`;
     indexMdEntries.push(indexMdEntry);
     iconsCount++;
   });
 
-  await fs.remove('src/index.ts');
-  fs.writeFile('src/index.ts', indexTsEntries.join('\n'));
-  await fs.remove('src/index.d.ts');
-  fs.writeFile('src/index.d.ts', indexDTsEntries.join('\n'));
+  await fs.remove("src/index.ts");
+  fs.writeFile("src/index.ts", indexTsEntries.join("\n"));
+  await fs.remove("src/index.d.ts");
+  fs.writeFile("src/index.d.ts", indexDTsEntries.join("\n"));
 
-  indexMdEntries.unshift('|-|-|-|-|-|');
-  indexMdEntries.unshift('|Icon Component|Friendly Name|Aliases|Category|Sub-category|');
-  indexMdEntries.unshift('');
+  indexMdEntries.unshift("|-|-|-|-|-|");
+  indexMdEntries.unshift("|Icon Component|Friendly Name|Aliases|Category|Sub-category|");
+  indexMdEntries.unshift("");
   indexMdEntries.unshift(`> ${iconsCount} icons from ${name}@${VERSION}`);
-  indexMdEntries.unshift('# Icon Index');
-  fs.writeFile('ICON_INDEX.md', indexMdEntries.join('\n'));
+  indexMdEntries.unshift("# Icon Index");
+  fs.writeFile("ICON_INDEX.md", indexMdEntries.join("\n"));
   console.timeEnd(TIME_MARKER);
   console.info(`${iconsCount} icons built.`);
 };
@@ -76,17 +79,25 @@ export const toPascalCase = (name?: string): string | undefined => {
   if (!name) {
     return name;
   }
-  const words = name?.split(' ');
+  const words = name?.split(" ");
   if (words?.length < 2) {
     return name;
   } else {
-    return words
-      .map(word => (word.substring(0, 1).toUpperCase() + word.substring(1)))
-      .join('');
+    return words.map(word => word.substring(0, 1).toUpperCase() + word.substring(1)).join("");
   }
 };
 
-const numbersToNames = new Map([['1', 'One'], ['2', 'Two'], ['3', 'Three'], ['4', 'Four'], ['5', 'Five'], ['6', 'Six'], ['7', 'Seven'], ['8', 'Eight'], ['9', 'Nine']]);
+const numbersToNames = new Map([
+  ["1", "One"],
+  ["2", "Two"],
+  ["3", "Three"],
+  ["4", "Four"],
+  ["5", "Five"],
+  ["6", "Six"],
+  ["7", "Seven"],
+  ["8", "Eight"],
+  ["9", "Nine"],
+]);
 
 /**
  * Converts numbers to words and removes invalid characters
@@ -107,9 +118,9 @@ export const stripInvalidCharacters = (name?: string): string | undefined => {
   }
 
   // Remove illegal chars
-  const illegalChars = ['®', '™', '/', '-', '.'];
+  const illegalChars = ["®", "™", "/", "-", "."];
   while (illegalChars.find(char => sanitisedName.includes(char))) {
-    illegalChars.forEach(char => (sanitisedName = sanitisedName.replace(char, '')));
+    illegalChars.forEach(char => (sanitisedName = sanitisedName.replace(char, "")));
   }
 
   return sanitisedName;
@@ -122,10 +133,17 @@ export const stripInvalidCharacters = (name?: string): string | undefined => {
  * @returns Unique friendly name
  */
 export const correctedFriendlyName = (name: string, friendlyName: string): string | undefined => {
-  const correctedNames = new Map([['box--large', 'Box large'], ['watson--machine-learning', 'Watson Machine Learning']]);
+  const correctedNames = new Map([
+    ["box--large", "Box large"],
+    ["watson--machine-learning", "Watson Machine Learning"],
+    ["infinity-symbol", "Infinity Symbol"],
+    ["ibm--tenet", "IBM Tenet"],
+    ["ibm--bluepay", "IBM BluePay"],
+    ["ibm-z-os", "IBM ZedOS"],
+  ]);
   if (correctedNames.has(name)) {
     return correctedNames.get(name);
   } else {
     return friendlyName;
   }
-}
+};
